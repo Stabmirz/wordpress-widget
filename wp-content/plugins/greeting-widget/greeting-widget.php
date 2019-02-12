@@ -32,7 +32,7 @@ class Greeting_Widget extends WP_Widget {
     echo $args['before_title'];
     echo $title;
     echo $args['after_title'];
-    $greetings=array("Hello and Welcome to my Page."=>"one", "Oh, hi there! I make websites that 'function' and 'sparkle'."=>"two","Hi there! I craft beautiful & usable websites."=>"three","Hello, my name is Abida Mirza, I'm a web developer & I love to create beautiful User Interfaces"=>"four","Hi, I'm Abida. I'm a passionate webdesigner who love to create clean websites.Check it out!"=>"one");?>
+    $greetings=array("Hallo and Welcome to my Page."=>"one", "Oh, hi there! I make websites that 'function' and 'sparkle'."=>"two","Hi there! I craft beautiful & usable websites."=>"three","Hallo, my name is Abida Mirza, I'm a web developer & I love to create beautiful User Interfaces."=>"four","Hi, I'm Abida. I'm a passionate webdesigner who love to create clean websites. Check it out!"=>"five");?>
     <p style="color:red; font-size:24 px; font-style:italic"><?php
       print_r(array_rand($greetings ,1));?>
     </p><?php
