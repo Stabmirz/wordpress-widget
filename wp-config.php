@@ -48,14 +48,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'd}T79g?;T/I*9!%.rJr&IyaC$T_ sN>){5h4d?/bI6v~lTTy;R0j)O 6z$b)v{%[');
-define('SECURE_AUTH_KEY',  ')2TiMxvYHJuxpUSJR!q[:{&saZ7qK95j0Wzh`7#oB2?+b9Q_n8Wm##NB ?5, ?G|');
-define('LOGGED_IN_KEY',    'Y0c<eOwZ)RQ4B]*<:_r+UK-Es~/E*{70C[laZ8rYu}Iatqoy<7V@GUM!3xjI3[7Z');
-define('NONCE_KEY',        ',}OeM|e6}ioIesgr?y2KP6s6UNJ,(O5Tmf`+wC#R-42>{N-fcsQ{J7?<Q~j!NZQi');
-define('AUTH_SALT',        '7s|M ha}j=d2RBCa2dRS(ha,9=Yx$VGLJ}jLXoLlV=zW0fxJ TdOgkp]Gw4lrLB>');
-define('SECURE_AUTH_SALT', 'SI|95fO!Y`jS9WiDl3tytaVGn)u(|0++ JW}a7]j1T`XX&+]aIL?r!-;Ecosw?lj');
-define('LOGGED_IN_SALT',   '@XvLRaSOA/(%K8tp7@WZk4J0~CV8C7z@f[<VY5=i7$XGM7|](jXj8Gls#d8aT,tu');
-define('NONCE_SALT',       '3{6<kk,tHD46TGcgnYty@b(fY4i h2G~io5L39n4|kb.svU^ZHcQo1OR<:@= <y|');
+define('AUTH_KEY',         ')|+ij,Z:W.RQ<ZERFU4z,~t?Tu< E]D%d{ e>]M<)5z(tJRfS,ht>@GD[V?>Ok$e');
+define('SECURE_AUTH_KEY',  '7HEk:v3B72VM]:<HJ&.4VMw=Oy*&%!dm*Fg{&C1G=7f465E# =<&_xqt_UahV0;B');
+define('LOGGED_IN_KEY',    'DjuJlI1LIGi;KY4,SEW42nm(Z^+hY4r}70)*1Gn[?ZQ=v:Pvv#(8*#sf-?%SMbUG');
+define('NONCE_KEY',        'Rk#1`%FQ|/<:)Bo9OhF^1JM_A6b~AD|QpANSr$^7m#-=d,s,t)5%<_,-kuO I+aO');
+define('AUTH_SALT',        'yN@lwX89@M<w<TP#]Wxum!r/COt.)7gp<<[DGNB7LA!lU7u8d+i z7}LS!q]W/DB');
+define('SECURE_AUTH_SALT', 'tHjb|{Q%SvC:GP}$.$L6h0Q#>@`q:@DMQ>6`,%<[[>$&L:|DO_meUDLkYZya5(IJ');
+define('LOGGED_IN_SALT',   'SSypk)3.Z=]pcj!r=D{*yu[2*5IHN:^i}6Ab9Yk<r/i^~QtL`E=(LQT-033 EAu#');
+define('NONCE_SALT',       'GIlw87yS,0w?Tg8LUU00<ftq[Z{^P9Gq)@ke1 }eAZh1CtO^-~=w6Nh+L^r)pt}O');
 
 /**#@-*/
 
@@ -65,7 +65,7 @@ define('NONCE_SALT',       '3{6<kk,tHD46TGcgnYty@b(fY4i h2G~io5L39n4|kb.svU^ZHcQ
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wd_';
+$table_prefix  = 'wp_';
 
 /**
  * For developers: WordPress debugging mode.
@@ -89,3 +89,4 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
