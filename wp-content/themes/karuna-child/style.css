@@ -1,0 +1,17 @@
+/*
+ Theme Name:   Karuna Child
+ Theme URI:    http://example.com/karuna-child/
+ Description:  Karuna Child Theme
+ Author:       Abida Mirza
+ Author URI:   http://example.com
+ Template:     karuna
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  karuna-child
+*/
+
+body{
+    color:white;
+}
