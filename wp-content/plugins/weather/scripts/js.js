@@ -85,8 +85,6 @@ function getWeather(response, url){
     function changeIcon(response) {
 
        var description = response.weather[0].description;
-        var description = "clear sky";
-        var description = "rain";
         var icon;
         switch(description) {
             case "clear sky":
