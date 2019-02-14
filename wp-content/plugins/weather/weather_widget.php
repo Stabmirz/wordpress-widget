@@ -7,7 +7,7 @@
 
 </head>
 
-<body onload="dateMonth();">
+<body onload="date();">
 
 <article class="weather_widget">
 
@@ -27,9 +27,9 @@
         <h3 class="city"> </h3>
     </div>
     
-    <div class="weather_date">
-        <span id="weather_month"></span>
-        <span id="weather_day"></span>
+    <div class="time">
+        <span id="month"></span>
+        <span id="date"></span>
     </div>
 
 </article>

@@ -51,7 +51,7 @@ function getWeather(response, url){
         return $.ajax({
             type: "post",
             data : {city : city},
-            url: ""+url+"/wp-content/plugins/weather/api/api_call.php",
+            url: ""+url+"/wp-content/plugins/weather/api/apiCall.php",
 
             success: function(response) {
                 changeIcon(response);
@@ -147,10 +147,10 @@ function getWeather(response, url){
 
 
     
-function dateMonth() {
+function date() {
 
-var d = new Date();
-document.getElementById("weather_day").innerHTML = d.getDate();
+var date = new Date();
+document.getElementById("date").innerHTML = date.getDate();
 
 var month = new Array();
 month[0] = "January";
@@ -165,6 +165,6 @@ month[8] = "September";
 month[9] = "October";
 month[10] = "November";
 month[11] = "December";
-document.getElementById("weather_month").innerHTML = month[d.getMonth()];
+document.getElementById("month").innerHTML = month[date.getMonth()];
 
 }

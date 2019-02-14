@@ -15,7 +15,7 @@
 }
 
 .weatherIcon{
-  background-color: #4dbde2;
+  background: url(img.jpg);
   height: 70%;
   width: 100%;
   position: absolute;
@@ -108,7 +108,7 @@
   transform: translate(-50%, 0);
 }
 
-.weather_date {
+.time {
   height: 11%;
   width: 67%;
   position: absolute;
@@ -117,12 +117,12 @@
   border-bottom-right-radius: 6px;
 }
 
-#weather_month{
+#month{
   color: #FFF;
   top:10%;
 }
 
-#weather_day{
+#date{
   margin: 0 0 0px 5px;
   color: #FFF;
 }

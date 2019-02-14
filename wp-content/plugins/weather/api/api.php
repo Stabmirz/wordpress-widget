@@ -1,7 +1,7 @@
 <?php
 
 
-class Weather_Api
+class Api
 {
 
     private $program_service = null;
@@ -32,16 +32,16 @@ class Weather_Api
      *
      * @param string $city
      */
-    public function getWeatherData($city)
+    public function getData($city)
     {
 
 
 
-    if ($weatherData = $this->_service($city))
+    if ($data = $this->_service($city))
         {
 
             header('Content-type: application-json; charset=utf8;');
-            echo json_encode($weatherData);
+            echo json_encode($data);
         }
 
     }

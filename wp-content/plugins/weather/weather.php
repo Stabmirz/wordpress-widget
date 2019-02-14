@@ -11,7 +11,7 @@ Author URI: http://amirza.techlaunch.online
 function widget_install()
 {
 
-global $wpdb;
+global $wp_db;
 return true;
 }
 
@@ -27,7 +27,7 @@ function widget_style()
 
     wp_enqueue_script( 'script1', plugins_url('scripts/jquery-3.2.1.min.js', __FILE__), array('jquery'));
 
-    wp_enqueue_script( 'script', plugins_url('scripts/js.js', __FILE__), array('jquery'));
+    wp_enqueue_script( 'script', plugins_url('scripts/main.js', __FILE__), array('jquery'));
 
 
 }
@@ -38,7 +38,7 @@ function Widget_plugin()
 {
 
     ob_start();
-    $data = include_once('show_weather_widget.php');
+    $data = include_once('weather_widget.php');
     return ob_get_clean();
 }
 
@@ -46,7 +46,7 @@ function Widget_plugin()
 
 function widget_uninstall()
 {
-    global $wpdb;
+    global $wp_db;
     echo "Uninstall";
 }
 
