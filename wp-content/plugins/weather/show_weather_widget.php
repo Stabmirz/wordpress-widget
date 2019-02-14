@@ -24,9 +24,9 @@
     <div class="weatherData">
         <h2 class="description"></h2>
         <h1 class="temperature"> </h1>
-
         <h3 class="city"> </h3>
     </div>
+    
     <div class="weather_date">
         <span id="weather_month"></span>
         <span id="weather_day"></span>
