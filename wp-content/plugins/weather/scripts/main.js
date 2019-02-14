@@ -67,13 +67,13 @@ function getWeather(response, url){
 
 
                 $('.description').html("Condition:" + " " + description);
-                $('.temperature').html(Math.round(temp)+"&deg;");
+                $('.temperature').html(Math.round(temp)+"&#8451");
                 $('.weatherIcon').html("<img src='http://openweathermap.org/img/w/"+icon+".png'>");
                 $('.humidity').html("Humidity: " + humidity+"%");
                 $('.wind').html("Wind Speed: " + wind+"km/s");
                 $('.pressure').html("Preassure: " + pressure+"Pa");
-                $('.temp_min').html("Temp min: " + Math.round(temp_min)+"&deg;");
-                $('.temp_max').html("Temp max: " + Math.round(temp_max)+"&deg;");
+                $('.temp_min').html("Temp min: " + Math.round(temp_min)+"&#8451");
+                $('.temp_max').html("Temp max: " + Math.round(temp_max)+"&#8451");
 
 
             }
