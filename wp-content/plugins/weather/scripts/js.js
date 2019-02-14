@@ -146,10 +146,6 @@ function getWeather(response, url){
     }
 
 
-
-
-
-
     
 function dateMonth() {
 

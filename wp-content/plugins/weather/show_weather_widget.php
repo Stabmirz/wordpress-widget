@@ -32,8 +32,6 @@
         <span id="weather_day"></span>
     </div>
 
-
-
 </article>
 
 
@@ -45,7 +43,6 @@
 
     $(document).ready(function() {
         userData(url);
-
 
     });
 </script>

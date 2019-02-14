@@ -1,8 +1,7 @@
 <?php
 /*
 Plugin Name: Weather Plugin
-Plugin URI: http://wordpress.org/extend/plugins/#
-Description: This is a Weather plugin
+Plugin URI: http://amirza.techlaunch.online/wordpress-widget/
 Author: Abida Mirza
 Version: 1.0.0
 Author URI: http://amirza.techlaunch.online

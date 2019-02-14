@@ -44,8 +44,6 @@ class Weather_Api
             echo json_encode($weatherData);
         }
 
-
-
     }
 }
 ?>

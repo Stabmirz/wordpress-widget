@@ -9,5 +9,4 @@ if(isset($_POST['city'])) {
     $weather_api->getWeatherData($city);
 
     }
-
 ?>
