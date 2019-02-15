@@ -36,9 +36,6 @@ function option_page() {
         
     }
     global $plugin_url;
-    global $images_day;
-    global $imagesDay;
-    global $imagesNight; 
     global $city;
     
     if( isset( $_POST['form_submitted'] ) ) {
