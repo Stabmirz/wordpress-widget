@@ -1,0 +1,131 @@
+
+.weather_widget {
+
+  font-size: 18px;
+  height: 400px;
+  width: 325px;
+  position: relative;
+  right:0;
+  top:50%;
+
+}
+
+.weatherIcon{
+  background-color: rgb(62, 175, 209);
+  height: 70%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.weatherData {
+  background-color: #050505;
+  height: 27%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top:70%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.head {
+  color: #fff;
+  font-family: 'Open Sans';
+  font-weight: 200;
+  font-size: 2.3em;
+  line-height: 1.5em;
+  position: absolute;
+    background-color: #474747;
+
+}
+
+
+.p1{
+     position: absolute;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-weight: 200;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 17px;
+    margin-left:102px;
+
+}
+.p2{
+    color: #fff;
+    font-family: 'Open Sans';
+    font-weight: 200;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-top:52px;
+    position: absolute;
+    margin-left:102px;
+
+}
+.p3{
+    color: #fff;
+    font-family: 'Open Sans';
+    font-weight: 200;
+    font-size: 2.2em;
+    margin-top: 48px;
+    position: absolute;
+    margin-left: 1px;
+
+}
+
+.humidity{
+    font-weight: 400;
+    font-size: 18px;
+    left: 5%;
+    top: 20%;
+    color: #FFF;
+    position: absolute;
+}
+
+.wind{
+    font-weight: 400;
+    font-size: 18px;
+    left: 5%;
+    top: 50%;
+    color: #FFF;
+    position: absolute;
+}
+
+.pressure{
+    font-weight: 400;
+    font-size: 18px;
+    left: 5%;
+    top: 35%;
+    color: #FFF;
+    position: absolute;
+}
+
+.temp_max{
+    font-weight: 400;
+    font-size: 18px;
+    left: 5%;
+    top: 80%;
+    color: #FFF;
+    position: absolute;
+}
+
+.temp_min{
+  font-weight: 400;
+  font-size: 18px;
+  left:5%;
+  top:65%;
+  color: #FFF;
+  position: absolute;
+}
+ 
+img
+{
+    height: 200px;
+    width: 180px;
+    margin-top: -40px;
+    margin-left: 150px;
+}
