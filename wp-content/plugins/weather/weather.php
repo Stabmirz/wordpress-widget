@@ -27,6 +27,7 @@ function option_menu()
 }
 
 add_action('admin_menu', 'option_menu');
+
 function option_page() {
     
     
@@ -50,9 +51,9 @@ function option_page() {
             
         }
         
-        require('inc/weather-widget.php');
     }
     
+    require('inc/weather-widget.php');
 
 
 }
@@ -102,11 +103,14 @@ function weather_styles() {
 
 }
 
-register_activation_hook(__FILE__, 'plugin_install');
-register_deactivation_hook(__FILE__, 'plugin_deactivate');
 
 add_action( 'admin_head', 'weather_styles' );
 add_action('wp_enqueue_scripts', 'getWeather');
+
+register_activation_hook(__FILE__, 'plugin_install');
+register_deactivation_hook(__FILE__, 'plugin_deactivate');
+
+
 
     // add_filter('widget_text','do_shortcode');
     // add_shortcode('weather_widget','getWeather');
