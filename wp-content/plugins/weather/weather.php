@@ -71,7 +71,7 @@ function getWeather($city){
 <div class="postbox">
 	<div class="inside">
         <h1 class="head">Weather Updates</h1>
-        <article class="weather_widget">
+        <article class="weather_plugin">
             <div class="weatherData">
                 <div class="p1"> <?= $weather_updates->name . ', ' . $weather_updates->sys->country ?> </div>        
                 <div class="p3"><?= floor(($weather_updates->main->temp) - 273.15) . '&#8451';?></div>
