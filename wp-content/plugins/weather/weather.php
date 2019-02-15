@@ -6,15 +6,14 @@ Author: Abida Mirza
 Version: 1.0.0
 Author URI: http://amirza.techlaunch.online
 */
-$plugin_url = WP_PLUGIN_URL . '/weather-plugin';
 
+$plugin_url = WP_PLUGIN_URL . '/weather-plugin';
 
 function plugin_install()
 {
-global $wpdb;
-return true;
+    global $wpdb;
+    return true;
 }
-
 
 function option_menu()
 {
@@ -29,14 +28,13 @@ function option_menu()
 
 add_action('admin_menu', 'option_menu');
 function option_page() {
-    ob_start();
-
+    
+    
     if( !current_user_can( 'manage_options' ) ) {
         
         wp_die( 'You do not have suggicient permissions to access this page.' );
         
     }
-    
     global $plugin_url;
     global $images_day;
     global $imagesDay;
@@ -55,12 +53,12 @@ function option_page() {
             
         }
         
+        require('inc/weather-widget.php');
     }
     
-    require('inc/weather-widget.php');
-    return ob_get_clean();
-}
 
+
+}
 function getWeather($city){   
     
     $json_feed_url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&appid=dc5f7b3695d656163a060520063f2850';
@@ -71,7 +69,6 @@ function getWeather($city){
     
     $weather_updates = json_decode( $json_feed['body'] );
 ?>
-
 <div class="postbox">
 	<div class="inside">
         <h1 class="head">Weather Updates</h1>
@@ -92,14 +89,13 @@ function getWeather($city){
         </article>
     </div>
 </div>
-<?php
-    
+<?php  
 }
 
-function plugin_uninstall()
+function plugin_deactivate()
 {
     global $wpdb;
-    echo "Uninstall";
+    echo "deactivate";
 }
 
 
@@ -109,21 +105,14 @@ function weather_styles() {
 
 }
 
+register_activation_hook(__FILE__, 'plugin_install');
+register_deactivation_hook(__FILE__, 'plugin_deactivate');
 
 add_action( 'admin_head', 'weather_styles' );
 add_action('wp_enqueue_scripts', 'getWeather');
 
+    // add_filter('widget_text','do_shortcode');
+    // add_shortcode('weather_widget','getWeather');
 
-register_activation_hook(__FILE__, 'plugin_install');
-register_deactivation_hook(__FILE__, 'plugin_uninstall');
-
-
-// add_filter('widget_text','do_shortcode');
-// add_shortcode('weather_widget','getWeather');
-
-
+    //object(stdClass)#1019 (12) { ["coord"]=> object(stdClass)#1018 (2) { ["lon"]=> float(-80.19) ["lat"]=> float(25.77) } ["weather"]=> array(1) { [0]=> object(stdClass)#1025 (4) { ["id"]=> int(803) ["main"]=> string(6) "Clouds" ["description"]=> string(13) "broken clouds" ["icon"]=> string(3) "04n" } } ["base"]=> string(8) "stations" ["main"]=> object(stdClass)#1023 (5) { ["temp"]=> float(292.28) ["pressure"]=> int(1016) ["humidity"]=> int(88) ["temp_min"]=> float(290.15) ["temp_max"]=> float(295.15) } ["visibility"]=> int(16093) ["wind"]=> object(stdClass)#1026 (2) { ["speed"]=> float(2.1) ["deg"]=> int(350) } ["clouds"]=> object(stdClass)#1027 (1) { ["all"]=> int(75) } ["dt"]=> int(1550210160) ["sys"]=> object(stdClass)#1028 (6) { ["type"]=> int(1) ["id"]=> int(4896) ["message"]=> float(0.0034) ["country"]=> string(2) "US" ["sunrise"]=> int(1550231749) ["sunset"]=> int(1550272455) } ["id"]=> int(4164138) ["name"]=> string(5) "Miami" ["cod"]=> int(200) }
 ?>
-
-<!--  object(stdClass)#1019 (12) { ["coord"]=> object(stdClass)#1018 (2) { ["lon"]=> float(-80.19) ["lat"]=> float(25.77) } ["weather"]=> array(1) { [0]=> object(stdClass)#1025 (4) { ["id"]=> int(803) ["main"]=> string(6) "Clouds" ["description"]=> string(13) "broken clouds" ["icon"]=> string(3) "04n" } } ["base"]=> string(8) "stations" ["main"]=> object(stdClass)#1023 (5) { ["temp"]=> float(292.28) ["pressure"]=> int(1016) ["humidity"]=> int(88) ["temp_min"]=> float(290.15) ["temp_max"]=> float(295.15) } ["visibility"]=> int(16093) ["wind"]=> object(stdClass)#1026 (2) { ["speed"]=> float(2.1) ["deg"]=> int(350) } ["clouds"]=> object(stdClass)#1027 (1) { ["all"]=> int(75) } ["dt"]=> int(1550210160) ["sys"]=> object(stdClass)#1028 (6) { ["type"]=> int(1) ["id"]=> int(4896) ["message"]=> float(0.0034) ["country"]=> string(2) "US" ["sunrise"]=> int(1550231749) ["sunset"]=> int(1550272455) } ["id"]=> int(4164138) ["name"]=> string(5) "Miami" ["cod"]=> int(200) } -->
-
-					
