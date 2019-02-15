@@ -1,10 +1,11 @@
 <?php
 /*
-Plugin Name: Weather
+Plugin Name: Weather Plugin
 Plugin URI: http://amirza.techlaunch.online/wordpress-widget/
 Author: Abida Mirza
 Version: 1.0.0
 Author URI: http://amirza.techlaunch.online
+License:     GPL2
 */
 
 $plugin_url = WP_PLUGIN_URL . '/weather-plugin';
