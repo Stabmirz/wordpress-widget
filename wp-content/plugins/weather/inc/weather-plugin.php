@@ -33,7 +33,7 @@
 							</table>
 
 							<p>
-								<input class="button-primary" type="submit" name="submit" value="Save" /> 
+								<input class="button-primary" type="submit" name="submit" value="Enter" /> 
 							</p>
 
 							</form>
