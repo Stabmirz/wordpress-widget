@@ -8,6 +8,14 @@ Author URI: http://amirza.techlaunch.online
 */
 $plugin_url = WP_PLUGIN_URL . '/weather-plugin';
 
+
+function plugin_install()
+{
+global $wpdb;
+return true;
+}
+
+
 function option_menu()
 {
     add_options_page(
@@ -21,7 +29,8 @@ function option_menu()
 
 add_action('admin_menu', 'option_menu');
 function option_page() {
-    
+    ob_start();
+
     if( !current_user_can( 'manage_options' ) ) {
         
         wp_die( 'You do not have suggicient permissions to access this page.' );
@@ -33,8 +42,6 @@ function option_page() {
     global $imagesDay;
     global $imagesNight; 
     global $city;
-    $imagesDay = $plugin_url . '/images/day/' ;
-    $imagesNight = $plugin_url . '/images/night/' ;
     
     if( isset( $_POST['form_submitted'] ) ) {
         
@@ -50,12 +57,13 @@ function option_page() {
         
     }
     
-	include('inc/weather-widget.php');
+    require('inc/weather-widget.php');
+    return ob_get_clean();
 }
 
 function getWeather($city){   
     
-    $json_feed_url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&appid=42cf2654dc52a783c605577b3dbf51d7';
+    $json_feed_url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&appid=dc5f7b3695d656163a060520063f2850';
     
     $args = array('timeoute' => 120);
     
@@ -88,6 +96,12 @@ function getWeather($city){
     
 }
 
+function plugin_uninstall()
+{
+    global $wpdb;
+    echo "Uninstall";
+}
+
 
 function weather_styles() {
 
@@ -98,6 +112,11 @@ function weather_styles() {
 
 add_action( 'admin_head', 'weather_styles' );
 add_action('wp_enqueue_scripts', 'getWeather');
+
+
+register_activation_hook(__FILE__, 'plugin_install');
+register_deactivation_hook(__FILE__, 'plugin_uninstall');
+
 
 // add_filter('widget_text','do_shortcode');
 // add_shortcode('weather_widget','getWeather');
