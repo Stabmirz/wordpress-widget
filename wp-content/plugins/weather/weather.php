@@ -54,7 +54,7 @@ function option_page() {
         
     }
     
-    require('inc/weather-widget.php');
+    require('inc/weather-plugin.php');
 
 
 }
@@ -89,6 +89,7 @@ function getWeather($city){
     </div>
 </div>
 <?php  
+
 }
 
 function plugin_deactivate()
