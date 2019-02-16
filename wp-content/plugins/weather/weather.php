@@ -8,7 +8,7 @@ Author URI: http://amirza.techlaunch.online
 License:     GPL2
 */
 
-$plugin_url = WP_PLUGIN_URL . '/weather-plugin';
+$plugin_url = WP_PLUGIN_URL . '/weather';
 
 function plugin_install()
 {
