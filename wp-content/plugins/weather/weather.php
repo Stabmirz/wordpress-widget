@@ -67,6 +67,7 @@ function getWeather($city){
     $json_feed = wp_remote_get( $json_feed_url, $args );
     
     $weather_updates = json_decode( $json_feed['body'] );
+    var_dump($weather_updates);
 ?>
 <div class="postbox">
 	<div class="inside">
